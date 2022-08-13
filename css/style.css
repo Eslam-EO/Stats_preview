@@ -1,0 +1,112 @@
+/* Start Global Values */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #090b1a;
+  font-size: 15px;
+}
+/* End Global Values */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content {
+  background-color: #1b1938;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  border-radius: 8px;
+}
+@media (max-width: 630px) {
+  .container .content {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 20px;
+  }
+}
+.container .content .txt-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+@media (max-width: 630px) {
+  .container .content .txt-content {
+    text-align: center;
+  }
+}
+.container .content .txt-content .text h1 {
+  margin: 20px 0;
+  color: white;
+}
+.container .content .txt-content .text h1 span {
+  color: #aa5cdb;
+}
+.container .content .txt-content .text p {
+  font-family: "Inter", sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+.container .content .txt-content .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 60px;
+}
+@media (max-width: 630px) {
+  .container .content .txt-content .stats {
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+  }
+}
+.container .content .txt-content .stats p {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.container .content .txt-content .stats h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+.container .content picture {
+  position: relative;
+}
+.container .content picture::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(170, 92, 219, 60%);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media (max-width: 630px) {
+  .container .content picture img {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+  }
+  .container .content picture::before {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.container .content picture img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
